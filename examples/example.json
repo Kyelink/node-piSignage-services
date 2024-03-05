@@ -1,0 +1,1066 @@
+[
+    {
+        "id": "32feeadd7be55064",
+        "type": "tab",
+        "label": "Flux 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "b0b30120db21c784",
+        "type": "pisignage-services",
+        "z": "32feeadd7be55064",
+        "creds": "d5c57d6f5f7b29a4",
+        "content": "files",
+        "methodForFiles": "GET ALL",
+        "idd": "",
+        "iddType": "num",
+        "name": "",
+        "nameType": "str",
+        "path": "C:\\Users\\pierr\\OneDrive\\Images\\Captures d’écran\\Capture d'écran 2023-12-26 133838.png",
+        "pathType": "str",
+        "x": 310,
+        "y": 260,
+        "wires": [
+            [
+                "64a01b3283bda7da"
+            ]
+        ]
+    },
+    {
+        "id": "3986e2b75a1e114d",
+        "type": "inject",
+        "z": "32feeadd7be55064",
+        "name": "Get All",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 90,
+        "y": 260,
+        "wires": [
+            [
+                "b0b30120db21c784"
+            ]
+        ]
+    },
+    {
+        "id": "f936d65767e4f7eb",
+        "type": "debug",
+        "z": "32feeadd7be55064",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "8dba3519e165b68a",
+        "type": "pisignage-services",
+        "z": "32feeadd7be55064",
+        "creds": "d5c57d6f5f7b29a4",
+        "content": "files",
+        "methodForFiles": "DELETE",
+        "idd": "",
+        "iddType": "num",
+        "name": "Death_note_l_2500x1600.jpg",
+        "nameType": "str",
+        "path": "C:\\Users\\pierr\\OneDrive\\Images\\Captures d’écran\\Capture d'écran 2023-12-26 133838.png",
+        "pathType": "str",
+        "nameFile": "",
+        "nameFileType": "str",
+        "x": 340,
+        "y": 400,
+        "wires": [
+            [
+                "324dad986a7abdd2"
+            ]
+        ]
+    },
+    {
+        "id": "ea09f8fd1a949f22",
+        "type": "inject",
+        "z": "32feeadd7be55064",
+        "name": "Delete",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 90,
+        "y": 400,
+        "wires": [
+            [
+                "8dba3519e165b68a"
+            ]
+        ]
+    },
+    {
+        "id": "324dad986a7abdd2",
+        "type": "debug",
+        "z": "32feeadd7be55064",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "64a01b3283bda7da",
+        "type": "change",
+        "z": "32feeadd7be55064",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.data.files",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 260,
+        "wires": [
+            [
+                "dd3d1afafd67a31b"
+            ]
+        ]
+    },
+    {
+        "id": "dd3d1afafd67a31b",
+        "type": "split",
+        "z": "32feeadd7be55064",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 670,
+        "y": 260,
+        "wires": [
+            [
+                "f936d65767e4f7eb"
+            ]
+        ]
+    },
+    {
+        "id": "6a4d5583c7e5e7d4",
+        "type": "pisignage-services",
+        "z": "32feeadd7be55064",
+        "creds": "d5c57d6f5f7b29a4",
+        "content": "files",
+        "methodForFiles": "GET ALL",
+        "idd": "",
+        "iddType": "num",
+        "name": "",
+        "nameType": "str",
+        "path": "C:\\Users\\pierr\\OneDrive\\Images\\Captures d’écran\\Capture d'écran 2023-12-26 133838.png",
+        "pathType": "str",
+        "x": 310,
+        "y": 140,
+        "wires": [
+            [
+                "1ae46d4db936bc3f"
+            ]
+        ]
+    },
+    {
+        "id": "6757a37e4b8de882",
+        "type": "inject",
+        "z": "32feeadd7be55064",
+        "name": "Get All",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 90,
+        "y": 140,
+        "wires": [
+            [
+                "6a4d5583c7e5e7d4"
+            ]
+        ]
+    },
+    {
+        "id": "1ae46d4db936bc3f",
+        "type": "debug",
+        "z": "32feeadd7be55064",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "4f42af16d7aa08dd",
+        "type": "pisignage-services",
+        "z": "32feeadd7be55064",
+        "creds": "d5c57d6f5f7b29a4",
+        "content": "files",
+        "methodForFiles": "POST FROM LOCAL",
+        "idd": "",
+        "iddType": "num",
+        "name": "",
+        "nameType": "str",
+        "path": "C:\\Users\\pierr\\OneDrive\\Images\\Death_note_l_2500x1600.jpg",
+        "pathType": "str",
+        "nameFile": "",
+        "nameFileType": "str",
+        "x": 310,
+        "y": 60,
+        "wires": [
+            [
+                "791dee59c6ae925c"
+            ]
+        ]
+    },
+    {
+        "id": "cf054a47755fc7c6",
+        "type": "inject",
+        "z": "32feeadd7be55064",
+        "name": "Post",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 90,
+        "y": 60,
+        "wires": [
+            [
+                "4f42af16d7aa08dd"
+            ]
+        ]
+    },
+    {
+        "id": "791dee59c6ae925c",
+        "type": "debug",
+        "z": "32feeadd7be55064",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "19fb1929387cf2b1",
+        "type": "pisignage-services",
+        "z": "32feeadd7be55064",
+        "creds": "d5c57d6f5f7b29a4",
+        "content": "files",
+        "methodForFiles": "POST DETAILS",
+        "idd": "",
+        "iddType": "num",
+        "name": "marion.png",
+        "nameType": "str",
+        "path": "C:\\Users\\pierr\\OneDrive\\Images\\marion.png",
+        "pathType": "str",
+        "nameFile": "mariooooo.png",
+        "nameFileType": "str",
+        "x": 390,
+        "y": 480,
+        "wires": [
+            [
+                "9ca141ad9d57e61f"
+            ]
+        ]
+    },
+    {
+        "id": "87b58b2ea4ac688c",
+        "type": "inject",
+        "z": "32feeadd7be55064",
+        "name": "Post Details",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 480,
+        "wires": [
+            [
+                "19fb1929387cf2b1"
+            ]
+        ]
+    },
+    {
+        "id": "9ca141ad9d57e61f",
+        "type": "debug",
+        "z": "32feeadd7be55064",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "ff07577986f87d55",
+        "type": "pisignage-services",
+        "z": "32feeadd7be55064",
+        "creds": "d5c57d6f5f7b29a4",
+        "content": "files",
+        "methodForFiles": "GET ONE",
+        "idd": "",
+        "iddType": "num",
+        "name": "zinzinnia.jpg",
+        "nameType": "str",
+        "path": "C:\\Users\\pierr\\OneDrive\\Images\\marion.png",
+        "pathType": "str",
+        "nameFile": "mariooooo.png",
+        "nameFileType": "str",
+        "x": 330,
+        "y": 560,
+        "wires": [
+            [
+                "b378b37316de218b"
+            ]
+        ]
+    },
+    {
+        "id": "d5210f61dfa8991d",
+        "type": "inject",
+        "z": "32feeadd7be55064",
+        "name": "Get one",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 560,
+        "wires": [
+            [
+                "ff07577986f87d55"
+            ]
+        ]
+    },
+    {
+        "id": "b378b37316de218b",
+        "type": "debug",
+        "z": "32feeadd7be55064",
+        "name": "debug 11",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "cb88aaf3a8011f0c",
+        "type": "inject",
+        "z": "32feeadd7be55064",
+        "name": "Rename",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 640,
+        "wires": [
+            [
+                "6007ffc6df8594ed"
+            ]
+        ]
+    },
+    {
+        "id": "6007ffc6df8594ed",
+        "type": "pisignage-services",
+        "z": "32feeadd7be55064",
+        "creds": "d5c57d6f5f7b29a4",
+        "content": "files",
+        "methodForFiles": "POST DETAILS",
+        "methodForPlaylists": "GET ALL",
+        "idd": "",
+        "iddType": "num",
+        "name": "zinnia.jpg",
+        "nameType": "str",
+        "path": "C:\\Users\\pierr\\OneDrive\\Images\\marion.png",
+        "pathType": "str",
+        "nameFile": "zinzinnia.jpg",
+        "nameFileType": "str",
+        "nameFileToAdd": "",
+        "nameFileToAddType": "str",
+        "duration": "10",
+        "durationType": "num",
+        "x": 300,
+        "y": 640,
+        "wires": [
+            [
+                "25e5c98fe2d722ea"
+            ]
+        ]
+    },
+    {
+        "id": "25e5c98fe2d722ea",
+        "type": "debug",
+        "z": "32feeadd7be55064",
+        "name": "debug 12",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "22a33aa1b391053b",
+        "type": "comment",
+        "z": "32feeadd7be55064",
+        "name": "Files",
+        "info": "",
+        "x": 70,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "f13f43a4796cdf22",
+        "type": "comment",
+        "z": "32feeadd7be55064",
+        "name": "Playlists",
+        "info": "# ",
+        "x": 100,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "19d9744e040e0cc6",
+        "type": "pisignage-services",
+        "z": "32feeadd7be55064",
+        "creds": "d5c57d6f5f7b29a4",
+        "content": "playlists",
+        "methodForFiles": "GET ALL",
+        "methodForPlaylists": "GET ALL",
+        "idd": "",
+        "iddType": "num",
+        "name": "",
+        "nameType": "str",
+        "path": "C:\\Users\\pierr\\OneDrive\\Images\\Captures d’écran\\Capture d'écran 2023-12-26 133838.png",
+        "pathType": "str",
+        "nameFile": "",
+        "nameFileType": "str",
+        "x": 330,
+        "y": 880,
+        "wires": [
+            [
+                "d0656af2c0367998"
+            ]
+        ]
+    },
+    {
+        "id": "e7a2cad9babbf0f3",
+        "type": "inject",
+        "z": "32feeadd7be55064",
+        "name": "Get All",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 880,
+        "wires": [
+            [
+                "19d9744e040e0cc6"
+            ]
+        ]
+    },
+    {
+        "id": "d0656af2c0367998",
+        "type": "debug",
+        "z": "32feeadd7be55064",
+        "name": "debug 13",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "94c893a90987b920",
+        "type": "pisignage-services",
+        "z": "32feeadd7be55064",
+        "creds": "d5c57d6f5f7b29a4",
+        "content": "playlists",
+        "methodForFiles": "GET ALL",
+        "methodForPlaylists": "GET ONE",
+        "idd": "",
+        "iddType": "num",
+        "name": "pltestapi",
+        "nameType": "str",
+        "path": "C:\\Users\\pierr\\OneDrive\\Images\\Captures d’écran\\Capture d'écran 2023-12-26 133838.png",
+        "pathType": "str",
+        "nameFile": "",
+        "nameFileType": "str",
+        "nameFileToAdd": "",
+        "nameFileToAddType": "str",
+        "duration": "10",
+        "durationType": "num",
+        "x": 300,
+        "y": 960,
+        "wires": [
+            [
+                "13cc531fc3deeda9"
+            ]
+        ]
+    },
+    {
+        "id": "8771c71ae98e6dde",
+        "type": "inject",
+        "z": "32feeadd7be55064",
+        "name": "Get One",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 960,
+        "wires": [
+            [
+                "94c893a90987b920"
+            ]
+        ]
+    },
+    {
+        "id": "13cc531fc3deeda9",
+        "type": "debug",
+        "z": "32feeadd7be55064",
+        "name": "debug 14",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "f7e51df8f86497da",
+        "type": "pisignage-services",
+        "z": "32feeadd7be55064",
+        "creds": "d5c57d6f5f7b29a4",
+        "content": "playlists",
+        "methodForFiles": "GET ALL",
+        "methodForPlaylists": "CREATE",
+        "idd": "",
+        "iddType": "num",
+        "name": "noexpl",
+        "nameType": "str",
+        "path": "C:\\Users\\pierr\\OneDrive\\Images\\Captures d’écran\\Capture d'écran 2023-12-26 133838.png",
+        "pathType": "str",
+        "nameFile": "",
+        "nameFileType": "str",
+        "x": 290,
+        "y": 1040,
+        "wires": [
+            [
+                "d76674e0521f6ab6"
+            ]
+        ]
+    },
+    {
+        "id": "af7da643da886b83",
+        "type": "inject",
+        "z": "32feeadd7be55064",
+        "name": "Create",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 1040,
+        "wires": [
+            [
+                "f7e51df8f86497da"
+            ]
+        ]
+    },
+    {
+        "id": "d76674e0521f6ab6",
+        "type": "debug",
+        "z": "32feeadd7be55064",
+        "name": "debug 15",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "1b821a9c0ef79c0e",
+        "type": "pisignage-services",
+        "z": "32feeadd7be55064",
+        "creds": "d5c57d6f5f7b29a4",
+        "content": "playlists",
+        "methodForFiles": "GET ALL",
+        "methodForPlaylists": "DELETE",
+        "idd": "",
+        "iddType": "num",
+        "name": "frt",
+        "nameType": "str",
+        "path": "C:\\Users\\pierr\\OneDrive\\Images\\Captures d’écran\\Capture d'écran 2023-12-26 133838.png",
+        "pathType": "str",
+        "nameFile": "",
+        "nameFileType": "str",
+        "x": 290,
+        "y": 1120,
+        "wires": [
+            [
+                "b2df8ac8017bea39"
+            ]
+        ]
+    },
+    {
+        "id": "907d14f335dee3d7",
+        "type": "inject",
+        "z": "32feeadd7be55064",
+        "name": "Delete",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 1120,
+        "wires": [
+            [
+                "1b821a9c0ef79c0e"
+            ]
+        ]
+    },
+    {
+        "id": "b2df8ac8017bea39",
+        "type": "debug",
+        "z": "32feeadd7be55064",
+        "name": "debug 16",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "52a4be34a12f32ff",
+        "type": "inject",
+        "z": "32feeadd7be55064",
+        "name": "Add File",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 1220,
+        "wires": [
+            [
+                "309e65c6b8bc5d92"
+            ]
+        ]
+    },
+    {
+        "id": "89a988b8ac2ae1ae",
+        "type": "debug",
+        "z": "32feeadd7be55064",
+        "name": "debug 17",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "309e65c6b8bc5d92",
+        "type": "pisignage-services",
+        "z": "32feeadd7be55064",
+        "creds": "d5c57d6f5f7b29a4",
+        "content": "playlists",
+        "methodForFiles": "GET ALL",
+        "methodForPlaylists": "ADD FILE",
+        "idd": "",
+        "iddType": "num",
+        "name": "pltestapi",
+        "nameType": "str",
+        "path": "",
+        "pathType": "str",
+        "nameFile": "",
+        "nameFileType": "str",
+        "nameFileToAdd": "zinzinnia.jpg",
+        "nameFileToAddType": "str",
+        "duration": "101244",
+        "durationType": "num",
+        "x": 300,
+        "y": 1220,
+        "wires": [
+            [
+                "89a988b8ac2ae1ae"
+            ]
+        ]
+    },
+    {
+        "id": "df3395238e2df257",
+        "type": "inject",
+        "z": "32feeadd7be55064",
+        "name": "Remove File",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 1300,
+        "wires": [
+            [
+                "98b72e838ea804aa"
+            ]
+        ]
+    },
+    {
+        "id": "0365330fa99ebf98",
+        "type": "debug",
+        "z": "32feeadd7be55064",
+        "name": "debug 18",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "98b72e838ea804aa",
+        "type": "pisignage-services",
+        "z": "32feeadd7be55064",
+        "creds": "d5c57d6f5f7b29a4",
+        "content": "playlists",
+        "methodForFiles": "GET ALL",
+        "methodForPlaylists": "REMOVE FILE",
+        "idd": "",
+        "iddType": "num",
+        "name": "pltestapi",
+        "nameType": "str",
+        "path": "",
+        "pathType": "str",
+        "nameFile": "",
+        "nameFileType": "str",
+        "nameFileToAdd": "zinzinnia.jpg",
+        "nameFileToAddType": "str",
+        "duration": "101244",
+        "durationType": "num",
+        "x": 300,
+        "y": 1300,
+        "wires": [
+            [
+                "0365330fa99ebf98"
+            ]
+        ]
+    },
+    {
+        "id": "c973458cc9ee8668",
+        "type": "pisignage-services",
+        "z": "32feeadd7be55064",
+        "creds": "45a089d7cc2c88db",
+        "content": "files",
+        "methodForFiles": "GET ALL",
+        "methodForPlaylists": "GET ALL",
+        "methodForPlayers": "GET ALL",
+        "idd": "",
+        "iddType": "num",
+        "name": "",
+        "nameType": "str",
+        "path": "C:\\Users\\pierr\\OneDrive\\Images\\Captures d’écran\\Capture d'écran 2023-12-26 133838.png",
+        "pathType": "str",
+        "nameFile": "",
+        "nameFileType": "str",
+        "nameFileToAdd": "",
+        "nameFileToAddType": "str",
+        "duration": "10",
+        "durationType": "num",
+        "x": 1310,
+        "y": 140,
+        "wires": [
+            [
+                "40f12b181b32f1ed"
+            ]
+        ]
+    },
+    {
+        "id": "bbc3b6fedf98ff14",
+        "type": "inject",
+        "z": "32feeadd7be55064",
+        "name": "Get All",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1090,
+        "y": 140,
+        "wires": [
+            [
+                "c973458cc9ee8668"
+            ]
+        ]
+    },
+    {
+        "id": "40f12b181b32f1ed",
+        "type": "debug",
+        "z": "32feeadd7be55064",
+        "name": "debug 19",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1800,
+        "y": 140,
+        "wires": []
+    }
+]

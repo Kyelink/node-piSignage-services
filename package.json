@@ -1,0 +1,31 @@
+{
+  "name": "@tec6/node-red-pisignage-services",
+  "version": "0.1.0",
+  "description": "A node providing the services offered by the RESTful API of pisignage.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pierre-Alexis Fabbro <pierre.alexis.fabbro.pro@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "node-red",
+    "pisignage"
+  ],
+  "bugs": {
+    "url": "https://github.com/Kyelink/node-pisignage-services/issues",
+    "mail": "pierre.alexis.fabbro.pro@gmail.com"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "node-red": {
+    "version": ">=2.0.0",
+    "nodes": {
+      "pisignage-services": "pisignage-services.js"
+    }
+  },
+  "dependencies": {
+    "mime-types": "^2.1.35"
+  }
+}

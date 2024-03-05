@@ -1,0 +1,585 @@
+<script type="text/javascript">
+    RED.nodes.registerType('client-pisignage-credentials',{
+        category: 'config',
+        defaults: {
+            name: {value: ""},
+            username: {value: ""},
+            password: {value: "", type:"password"},
+            host: {value: ""},
+        },
+
+        oneditprepare: function(){
+            
+        },
+        oneditsave: function() {
+            
+        },
+        oneditresize: function() {
+            
+        },
+        label: function() {
+            return this.name;
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="client-pisignage-credentials">
+    <div class="form-row">
+        <label for="node-config-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-config-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-config-input-host"><i class="fa fa-lock"></i> Host</label>
+        <input type="text" id="node-config-input-host">
+    </div>
+
+    <div class="form-row" id="row-username">
+        <label for="node-config-input-username"><i class="fa fa-lock"></i> Username</label>
+        <input type="text" id="node-config-input-username">
+    </div>
+    <div class="form-row" id="row-password">
+        <label for="node-config-input-password"><i class="fa fa-lock"></i> Password</label>
+        <input type="password" id="node-config-input-password">
+    </div>
+
+    
+</script>
+
+
+
+<script type="text/javascript">
+    RED.nodes.registerType('pisignage-services',{
+        category: 'pisignage',
+        color: '#a6bbcf',
+        defaults: {
+            
+            creds: {type:"client-pisignage-credentials",required:true},
+            content:{value:"files"},
+            methodForFiles: {value:""},
+            methodForPlaylists: {value:""},
+            methodForPlayers: {value:""},
+            idd:{
+				value: '',
+				required: false,
+				validate: RED.validators.typedInput('inputtype')
+            },
+            iddType: { value: 'num' },
+            name:{
+				value: '',
+				required: false,
+				validate: RED.validators.typedInput('inputtype')
+            },
+            nameType: { value: 'str' },
+            path:{
+				value: '',
+				required: false,
+				validate: RED.validators.typedInput('inputtype')
+            },
+            pathType: { value: 'str' },
+
+            nameFile:{
+				value: '',
+				required: false,
+				validate: RED.validators.typedInput('inputtype')
+            },
+            nameFileType: { value: 'str' },
+            nameFileToAdd:{
+				value: '',
+				required: false,
+				validate: RED.validators.typedInput('inputtype')
+            },
+            nameFileToAddType: { value: 'str' },
+            duration:{
+				value: "",
+				required: false,
+				validate: RED.validators.typedInput('inputtype')
+            },
+            durationType: { value: 'num' },
+
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "pisignage.png",
+        oneditprepare: function(){
+            //variables
+
+            //functions
+            function manageGetAllFiles(){
+                $('#mFiles').show();
+                $('#row-idd').hide();
+                $('#row-path').hide();
+                $('#row-name').hide();
+                $('#row-newName').hide();
+                $('#mPlaylists').hide();
+                $('#row-duration').hide();
+                $('#row-nameFileToAdd').hide();
+                $('#mPlayers').hide();
+            }
+            function managePostFromLocalFiles(){
+                $('#mFiles').show();
+                $('#row-idd').hide();
+                $('#row-path').show();
+                $('#row-name').hide();
+                $('#row-newName').hide();
+                $('#mPlaylists').hide();
+                $('#row-duration').hide();
+                $('#row-nameFileToAdd').hide();
+                $('#mPlayers').hide();
+            }
+            function manageDeleteFiles(){
+                $('#mFiles').show();
+                $('#row-idd').hide();
+                $('#row-path').hide();
+                $('#row-name').show();
+                $('#row-newName').hide();
+                $('#mPlaylists').hide();
+                $('#row-duration').hide();
+                $('#row-nameFileToAdd').hide();
+                $('#mPlayers').hide();
+            }
+            function manageGetOneFiles(){
+                $('#mFiles').show();
+                $('#row-idd').hide();
+                $('#row-path').hide();
+                $('#row-name').show();
+                $('#row-newName').hide();
+                $('#mPlaylists').hide();
+                $('#row-duration').hide();
+                $('#row-nameFileToAdd').hide();
+                $('#mPlayers').hide();
+            }
+            function manageRenameFiles(){
+                $('#mFiles').show();
+                $('#row-idd').hide();
+                $('#row-path').hide();
+                $('#row-name').show();
+                $('#row-newName').show();
+                $('#mPlaylists').hide();
+                $('#row-duration').hide();
+                $('#row-nameFileToAdd').hide();
+                $('#mPlayers').hide();
+            }
+
+            function manageGetAllPlaylists(){
+                $('#mFiles').hide();
+                $('#row-idd').hide();
+                $('#row-path').hide();
+                $('#row-name').hide();
+                $('#row-newName').hide();
+                $('#mPlaylists').show();
+                $('#row-duration').hide();
+                $('#row-nameFileToAdd').hide();
+                $('#mPlayers').hide();
+            }
+            function manageGetOnePlaylists(){
+                $('#mFiles').hide();
+                $('#row-idd').hide();
+                $('#row-path').hide();
+                $('#row-name').show();
+                $('#row-newName').hide();
+                $('#mPlaylists').show();
+                $('#row-duration').hide();
+                $('#row-nameFileToAdd').hide();
+                $('#mPlayers').hide();
+            }
+            function manageCreatePlaylists(){
+                $('#mFiles').hide();
+                $('#row-idd').hide();
+                $('#row-path').hide();
+                $('#row-name').show();
+                $('#row-newName').hide();
+                $('#mPlaylists').show();
+                $('#row-duration').hide();
+                $('#row-nameFileToAdd').hide();
+                $('#mPlayers').hide();
+            }
+            function manageDeletePlaylists(){
+                $('#mFiles').hide();
+                $('#row-idd').hide();
+                $('#row-path').hide();
+                $('#row-name').show();
+                $('#row-newName').hide();
+                $('#mPlaylists').show();
+                $('#row-duration').hide();
+                $('#row-nameFileToAdd').hide();
+                $('#mPlayers').hide();
+            }
+            function manageAddFilePlaylists(){
+                $('#mFiles').hide();
+                $('#row-idd').hide();
+                $('#row-path').hide();
+                $('#row-name').show();
+                $('#row-newName').hide();
+                $('#mPlaylists').show();
+                $('#row-duration').show();
+                $('#row-nameFileToAdd').show();
+                $('#mPlayers').hide();
+            }
+            function manageRemoveFilePlaylists(){
+                $('#mFiles').hide();
+                $('#row-idd').hide();
+                $('#row-path').hide();
+                $('#row-name').show();
+                $('#row-newName').hide();
+                $('#mPlaylists').show();
+                $('#row-duration').hide();
+                $('#row-nameFileToAdd').show();
+                $('#mPlayers').hide();
+            }
+            
+            function manageGetAllPlayers(){
+                $('#mFiles').hide();
+                $('#row-idd').hide();
+                $('#row-path').hide();
+                $('#row-name').hide();
+                $('#row-newName').hide();
+                $('#mPlaylists').hide();
+                $('#row-duration').hide();
+                $('#row-nameFileToAdd').hide();
+                $('#mPlayers').show();
+            }
+            //node-red oneditprepare
+            if(!this.duration){$('#node-input-duration').val(10);}
+            $('#node-input-idd').typedInput({
+                default: 'num',
+                typeField: $("#node-input-iddType"),
+                types: ['flow','global','msg','num']
+            });
+            $('#node-input-name').typedInput({
+                default: 'str',
+                typeField: $("#node-input-nameType"),
+                types: ['flow','global','msg','str']
+            });
+            $('#node-input-path').typedInput({
+                default: 'str',
+                typeField: $("#node-input-pathType"),
+                types: ['flow','global','msg','str']
+            });
+            $('#node-input-duration').typedInput({
+                default: 'num',
+                typeField: $("#node-input-durationType"),
+                types: ['flow','global','msg','num']
+            });
+            $('#node-input-nameFile').typedInput({
+                default: 'str',
+                typeField: $("#node-input-nameFileType"),
+                types: ['flow','global','msg','str']
+            });
+            $('#node-input-nameFileToAdd').typedInput({
+                default: 'str',
+                typeField: $("#node-input-nameFileToAddType"),
+                types: ['flow','global','msg','str']
+            });
+ 
+
+            $("#node-input-methodForFiles").typedInput({
+                types: [
+                    {
+                        value: "methodForFiles",
+                        options: [
+                            { value: "GET ALL", label: "GET ALL"},
+                            { value: "GET ONE", label: "GET ONE"},
+                            { value: "DELETE", label: "DELETE"},
+                            { value: "POST FROM LOCAL", label: "POST FROM LOCAL"},
+                            { value: "RENAME", label: "RENAME"},
+                            { value: "POST DETAILS", label: "POST DETAILS"},
+                        ]
+                    }
+                ]
+            });
+
+            $("#node-input-methodForPlaylists").typedInput({
+                types: [
+                    {
+                        value: "methodForPlaylists",
+                        options: [
+                            { value: "GET ALL", label: "GET ALL"},
+                            { value: "GET ONE", label: "GET ONE"},
+                            { value: "DELETE", label: "DELETE"},
+                            { value: "CREATE", label: "CREATE"},
+                            { value: "REMOVE FILE", label: "REMOVE FILE"},
+                            { value: "ADD FILE", label: "ADD FILE"},
+                        ]
+                    }
+                ]
+            });
+            $("#node-input-methodForPlayers").typedInput({
+                types: [
+                    {
+                        value: "methodForPlayers",
+                        options: [
+                            { value: "GET ALL", label: "GET ALL"},
+                            { value: "GET ONE", label: "GET ONE"},
+                            { value: "DELETE", label: "DELETE"},
+                            { value: "CREATE", label: "CREATE"},
+                            { value: "REMOVE FILE", label: "REMOVE FILE"},
+                            { value: "ADD FILE", label: "ADD FILE"},
+                        ]
+                    }
+                ]
+            });
+
+            $("#node-input-content").typedInput({
+                types: [
+                    {
+                        value: "content",
+                        options: [
+                            { value: "files", label: "files"},
+                            { value: "playlists", label: "playlists"},
+                            { value: "players", label: "players"},
+                        ]
+                    }
+                ]
+            });
+            
+            $("#node-input-content").change(function () {
+                switch($(this).val()){
+                    case 'files':
+                        console.log("switch to files");
+                        switch($('#node-input-methodForFiles').val()){
+                            case 'GET ALL':
+                                manageGetAllFiles();
+                                break;
+                            case 'GET ONE':
+                                manageGetOneFiles();
+                                break;
+                            case 'POST FROM LOCAL':
+                                managePostFromLocalFiles();
+                                break;
+                            case 'RENAME':
+                                manageRenameFiles();
+                                break;
+                            
+                            case 'DELETE':
+                                manageDeleteFiles();
+                                break;
+                            
+                            default:
+                                console.log("default action playlist");
+                                break;
+                        }
+                        break;
+                    case 'playlists':
+                        console.log("switch to playlists");
+                        switch($('#node-input-methodForPlaylists').val()){
+                            case 'GET ALL':
+                                manageGetAllPlaylists();
+                                break;
+                            case 'GET ONE':
+                                manageGetOnePlaylists();
+                                break;
+                            case 'ADD FILE':
+                                manageAddFilePlaylists();
+                                break;
+                            case 'REMOVE FILE':
+                                manageRemoveFilePlaylists();
+                                break;
+                            case 'CREATE':
+                                manageCreatePlaylists();
+                                break;
+                            case 'DELETE':
+                                manageDeletePlaylists();
+                                break;
+                            
+                            default:
+                                console.log("default action playlist");
+                                break;
+                        }
+                        break;
+                    
+                    case 'players':
+                        console.log("switch to players");
+                        switch($('#node-input-methodForPlayers').val()){
+                            case 'GET ALL':
+                                manageGetAllPlayers();
+                                break;
+                            case 'GET ONE':
+                                manageGetOnePlaylists();
+                                break;
+                            case 'ADD FILE':
+                                manageAddFilePlaylists();
+                                break;
+                            case 'REMOVE FILE':
+                                manageRemoveFilePlaylists();
+                                break;
+                            case 'CREATE':
+                                manageCreatePlaylists();
+                                break;
+                            case 'DELETE':
+                                manageDeletePlaylists();
+                                break;
+                            
+                            default:
+                                console.log("default action players");
+                                break;
+                        }
+                        break;
+                    default:
+                        break;
+                }
+            });
+
+            $("#node-input-methodForFiles").change(function () {
+                switch($(this).val()){
+                    case 'GET ALL':
+                        manageGetAllFiles();
+                        break;
+                    case 'GET ONE':
+                        manageGetOneFiles();
+                        break;
+                    case 'POST FROM LOCAL':
+                        managePostFromLocalFiles();
+                        break;
+                    
+                    
+                    case 'RENAME':
+                        manageRenameFiles();
+                        break;
+                    case 'DELETE':
+                        manageDeleteFiles();
+                        break;
+                    default:
+                        break;
+                }
+            });
+
+            $("#node-input-methodForPlaylists").change(function () {
+                switch($(this).val()){
+                    case 'GET ALL':
+                        manageGetAllPlaylists();
+                        break;
+                    case 'GET ONE':
+                        manageGetOnePlaylists();
+                        break;
+                    case 'CREATE':
+                        manageCreatePlaylists();
+                        break;
+                    
+                    case 'ADD FILE':
+                        manageAddFilePlaylists();
+                        break;
+                    case 'REMOVE FILE':
+                        manageRemoveFilePlaylists();
+                        break;
+                    case 'DELETE':
+                        manageDeletePlaylists();
+                        break;
+                    default:
+                        break;
+                }
+            });
+
+            $("#node-input-methodForPlayers").change(function () {
+                switch($(this).val()){
+                    case 'GET ALL':
+                        manageGetAllPlayers();
+                        break;
+                    case 'GET ONE':
+                        manageGetOnePlaylists();
+                        break;
+                    case 'CREATE':
+                        manageCreatePlaylists();
+                        break;
+                    
+                    case 'ADD FILE':
+                        manageAddFilePlaylists();
+                        break;
+                    case 'REMOVE FILE':
+                        manageRemoveFilePlaylists();
+                        break;
+                    case 'DELETE':
+                        manageDeletePlaylists();
+                        break;
+                    default:
+                        break;
+                }
+            });
+
+            
+
+   
+        },
+        oneditsave: function() {
+           
+        },
+        oneditresize: function() {
+           
+        },
+        label: function() {
+            return this.name||"pisignage-services";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="pisignage-services">
+    <div class="form-row">
+        <label for="node-input-creds"><i class="fa fa-tag"></i> Credentials</label>
+        <input type="text" id="node-input-creds">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-content"> What</label>
+        <input type="text" id="node-input-content">
+    </div>
+
+    <div class="form-row" id=mFiles>
+        <label for="node-input-methodForFiles"> Action</label>
+        <input type="text" id="node-input-methodForFiles">
+    </div>
+
+    <div class="form-row" id=mPlaylists>
+        <label for="node-input-methodForPlaylists"> Action</label>
+        <input type="text" id="node-input-methodForPlaylists">
+    </div>
+
+    <div class="form-row" id=mPlayers>
+        <label for="node-input-methodForPlayers"> Action</label>
+        <input type="text" id="node-input-methodForPlayers">
+    </div>
+
+    <div class="form-row" id="row-name">
+		<label for="node-input-name"><i class="fa fa-hashtag"></i> Name</label>
+		<input type="text" id="node-input-name" style="width:70%">
+		<input type="hidden" id="node-input-nameType">
+    </div>
+    
+    <div class="form-row" id="row-duration">
+		<label for="node-input-duration"><i class="fa fa-hashtag"></i> Duration</label>
+		<input type="text" id="node-input-duration" style="width:70%">
+		<input type="hidden" id="node-input-durationType">
+    </div>
+
+    <div class="form-row" id="row-idd">
+		<label for="node-input-idd"><i class="fa fa-hashtag"></i> Id</label>
+		<input type="text" id="node-input-idd" style="width:70%">
+		<input type="hidden" id="node-input-iddType">
+    </div>
+
+    <div class="form-row" id="row-path">
+		<label for="node-input-path"><i class="fa fa-hashtag"></i> Path</label>
+		<input type="text" id="node-input-path" style="width:70%">
+		<input type="hidden" id="node-input-pathType">
+    </div>
+
+    <div class="form-row" id="row-newName">
+        <label for="node-input-nameFile"><i class="fa fa-hashtag"></i> New name</label>
+        <input type="text" id="node-input-nameFile" style="width:70%">
+        <input type="hidden" id="node-input-nameFileType">
+    </div>
+
+    <div class="form-row" id="row-nameFileToAdd">
+        <label for="node-input-nameFileToAdd"><i class="fa fa-hashtag"></i> Name of file</label>
+        <input type="text" id="node-input-nameFileToAdd" style="width:70%">
+        <input type="hidden" id="node-input-nameFileToAddType">
+    </div>
+
+    
+
+   
+    
+
+</script>
+
+<script type="text/html" data-help-name="pisignage-services">
+    <p>A simple node that converts the input payload into the pisignage's API services</p>
+</script>
