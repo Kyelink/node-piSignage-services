@@ -14,9 +14,23 @@ straightforward as possible.
  
 ### Fixed
 
+## [1.0.0] - 2024-03-29
+ 
+### Added
+
+Players and Groups CRUD functionalities.
+Files can now be added with data's stream input.
+Files can now be videos.
+Whole code refactored, less memory usage.
+Error management done.
+ 
+### Changed
+
+Code refactored.
+
+### Fixed
+
 ## [0.1.0] - 2024-03-05
-  
-Here we would have the update steps for 0.1.0 for people to follow.
  
 ### Added
 

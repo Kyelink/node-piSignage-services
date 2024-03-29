@@ -1,6 +1,6 @@
 {
   "name": "@tec6/node-red-pisignage-services",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A node providing the services offered by the RESTful API of pisignage.",
   "main": "index.js",
   "scripts": {

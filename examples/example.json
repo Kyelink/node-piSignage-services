@@ -13,13 +13,8 @@
         "z": "32feeadd7be55064",
         "creds": "d5c57d6f5f7b29a4",
         "content": "files",
-        "methodForFiles": "GET ALL",
-        "idd": "",
-        "iddType": "num",
-        "name": "",
-        "nameType": "str",
-        "path": "C:\\Users\\pierr\\OneDrive\\Images\\Captures d’écran\\Capture d'écran 2023-12-26 133838.png",
-        "pathType": "str",
+        "method": "GET ALL",
+        "complexPayload": [],
         "x": 310,
         "y": 260,
         "wires": [
@@ -80,15 +75,14 @@
         "z": "32feeadd7be55064",
         "creds": "d5c57d6f5f7b29a4",
         "content": "files",
-        "methodForFiles": "DELETE",
-        "idd": "",
-        "iddType": "num",
-        "name": "Death_note_l_2500x1600.jpg",
-        "nameType": "str",
-        "path": "C:\\Users\\pierr\\OneDrive\\Images\\Captures d’écran\\Capture d'écran 2023-12-26 133838.png",
-        "pathType": "str",
-        "nameFile": "",
-        "nameFileType": "str",
+        "method": "DELETE",
+        "complexPayload": [
+            {
+                "value": "",
+                "type": "str",
+                "name": "File's name"
+            }
+        ],
         "x": 340,
         "y": 400,
         "wires": [
@@ -194,13 +188,8 @@
         "z": "32feeadd7be55064",
         "creds": "d5c57d6f5f7b29a4",
         "content": "files",
-        "methodForFiles": "GET ALL",
-        "idd": "",
-        "iddType": "num",
-        "name": "",
-        "nameType": "str",
-        "path": "C:\\Users\\pierr\\OneDrive\\Images\\Captures d’écran\\Capture d'écran 2023-12-26 133838.png",
-        "pathType": "str",
+        "method": "GET ALL",
+        "complexPayload": [],
         "x": 310,
         "y": 140,
         "wires": [
@@ -228,8 +217,8 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "",
-        "payloadType": "date",
+        "payload": "sgfhneqrgzer",
+        "payloadType": "str",
         "x": 90,
         "y": 140,
         "wires": [
@@ -261,15 +250,14 @@
         "z": "32feeadd7be55064",
         "creds": "d5c57d6f5f7b29a4",
         "content": "files",
-        "methodForFiles": "POST FROM LOCAL",
-        "idd": "",
-        "iddType": "num",
-        "name": "",
-        "nameType": "str",
-        "path": "C:\\Users\\pierr\\OneDrive\\Images\\Death_note_l_2500x1600.jpg",
-        "pathType": "str",
-        "nameFile": "",
-        "nameFileType": "str",
+        "method": "POST FROM LOCAL",
+        "complexPayload": [
+            {
+                "value": "C:\\Users\\pierr\\OneDrive\\Bureau\\hash2.png",
+                "type": "str",
+                "name": "File's path"
+            }
+        ],
         "x": 310,
         "y": 60,
         "wires": [
@@ -329,16 +317,29 @@
         "type": "pisignage-services",
         "z": "32feeadd7be55064",
         "creds": "d5c57d6f5f7b29a4",
-        "content": "files",
-        "methodForFiles": "POST DETAILS",
-        "idd": "",
-        "iddType": "num",
-        "name": "marion.png",
-        "nameType": "str",
-        "path": "C:\\Users\\pierr\\OneDrive\\Images\\marion.png",
-        "pathType": "str",
-        "nameFile": "mariooooo.png",
-        "nameFileType": "str",
+        "content": "players",
+        "complexPayload": [
+            {
+                "value": "",
+                "type": "str"
+            },
+            {
+                "value": "",
+                "type": "str"
+            },
+            {
+                "value": "",
+                "type": "str"
+            },
+            {
+                "value": "",
+                "type": "str"
+            },
+            {
+                "value": "",
+                "type": "str"
+            }
+        ],
         "x": 390,
         "y": 480,
         "wires": [
@@ -399,15 +400,8 @@
         "z": "32feeadd7be55064",
         "creds": "d5c57d6f5f7b29a4",
         "content": "files",
-        "methodForFiles": "GET ONE",
-        "idd": "",
-        "iddType": "num",
-        "name": "zinzinnia.jpg",
-        "nameType": "str",
-        "path": "C:\\Users\\pierr\\OneDrive\\Images\\marion.png",
-        "pathType": "str",
-        "nameFile": "mariooooo.png",
-        "nameFileType": "str",
+        "method": "GET ONE",
+        "complexPayload": [],
         "x": 330,
         "y": 560,
         "wires": [
@@ -497,20 +491,6 @@
         "z": "32feeadd7be55064",
         "creds": "d5c57d6f5f7b29a4",
         "content": "files",
-        "methodForFiles": "POST DETAILS",
-        "methodForPlaylists": "GET ALL",
-        "idd": "",
-        "iddType": "num",
-        "name": "zinnia.jpg",
-        "nameType": "str",
-        "path": "C:\\Users\\pierr\\OneDrive\\Images\\marion.png",
-        "pathType": "str",
-        "nameFile": "zinzinnia.jpg",
-        "nameFileType": "str",
-        "nameFileToAdd": "",
-        "nameFileToAddType": "str",
-        "duration": "10",
-        "durationType": "num",
         "x": 300,
         "y": 640,
         "wires": [
@@ -562,16 +542,8 @@
         "z": "32feeadd7be55064",
         "creds": "d5c57d6f5f7b29a4",
         "content": "playlists",
-        "methodForFiles": "GET ALL",
-        "methodForPlaylists": "GET ALL",
-        "idd": "",
-        "iddType": "num",
-        "name": "",
-        "nameType": "str",
-        "path": "C:\\Users\\pierr\\OneDrive\\Images\\Captures d’écran\\Capture d'écran 2023-12-26 133838.png",
-        "pathType": "str",
-        "nameFile": "",
-        "nameFileType": "str",
+        "method": "GET ALL",
+        "complexPayload": [],
         "x": 330,
         "y": 880,
         "wires": [
@@ -632,20 +604,14 @@
         "z": "32feeadd7be55064",
         "creds": "d5c57d6f5f7b29a4",
         "content": "playlists",
-        "methodForFiles": "GET ALL",
-        "methodForPlaylists": "GET ONE",
-        "idd": "",
-        "iddType": "num",
-        "name": "pltestapi",
-        "nameType": "str",
-        "path": "C:\\Users\\pierr\\OneDrive\\Images\\Captures d’écran\\Capture d'écran 2023-12-26 133838.png",
-        "pathType": "str",
-        "nameFile": "",
-        "nameFileType": "str",
-        "nameFileToAdd": "",
-        "nameFileToAddType": "str",
-        "duration": "10",
-        "durationType": "num",
+        "method": "GET ONE",
+        "complexPayload": [
+            {
+                "value": "",
+                "type": "str",
+                "name": "Playlist's name"
+            }
+        ],
         "x": 300,
         "y": 960,
         "wires": [
@@ -706,16 +672,14 @@
         "z": "32feeadd7be55064",
         "creds": "d5c57d6f5f7b29a4",
         "content": "playlists",
-        "methodForFiles": "GET ALL",
-        "methodForPlaylists": "CREATE",
-        "idd": "",
-        "iddType": "num",
-        "name": "noexpl",
-        "nameType": "str",
-        "path": "C:\\Users\\pierr\\OneDrive\\Images\\Captures d’écran\\Capture d'écran 2023-12-26 133838.png",
-        "pathType": "str",
-        "nameFile": "",
-        "nameFileType": "str",
+        "method": "CREATE",
+        "complexPayload": [
+            {
+                "value": "plom",
+                "type": "str",
+                "name": "Playlist's name"
+            }
+        ],
         "x": 290,
         "y": 1040,
         "wires": [
@@ -776,16 +740,14 @@
         "z": "32feeadd7be55064",
         "creds": "d5c57d6f5f7b29a4",
         "content": "playlists",
-        "methodForFiles": "GET ALL",
-        "methodForPlaylists": "DELETE",
-        "idd": "",
-        "iddType": "num",
-        "name": "frt",
-        "nameType": "str",
-        "path": "C:\\Users\\pierr\\OneDrive\\Images\\Captures d’écran\\Capture d'écran 2023-12-26 133838.png",
-        "pathType": "str",
-        "nameFile": "",
-        "nameFileType": "str",
+        "method": "DELETE",
+        "complexPayload": [
+            {
+                "value": "plom",
+                "type": "str",
+                "name": "Playlist's name"
+            }
+        ],
         "x": 290,
         "y": 1120,
         "wires": [
@@ -892,21 +854,25 @@
         "z": "32feeadd7be55064",
         "creds": "d5c57d6f5f7b29a4",
         "content": "playlists",
-        "methodForFiles": "GET ALL",
-        "methodForPlaylists": "ADD FILE",
-        "idd": "",
-        "iddType": "num",
-        "name": "pltestapi",
-        "nameType": "str",
-        "path": "",
-        "pathType": "str",
-        "nameFile": "",
-        "nameFileType": "str",
-        "nameFileToAdd": "zinzinnia.jpg",
-        "nameFileToAddType": "str",
-        "duration": "101244",
-        "durationType": "num",
-        "x": 300,
+        "method": "ADD FILE",
+        "complexPayload": [
+            {
+                "value": "",
+                "type": "str",
+                "name": "Playlist's name"
+            },
+            {
+                "value": "",
+                "type": "str",
+                "name": "File's name"
+            },
+            {
+                "value": "10",
+                "type": "num",
+                "name": "Duration"
+            }
+        ],
+        "x": 290,
         "y": 1220,
         "wires": [
             [
@@ -966,20 +932,19 @@
         "z": "32feeadd7be55064",
         "creds": "d5c57d6f5f7b29a4",
         "content": "playlists",
-        "methodForFiles": "GET ALL",
-        "methodForPlaylists": "REMOVE FILE",
-        "idd": "",
-        "iddType": "num",
-        "name": "pltestapi",
-        "nameType": "str",
-        "path": "",
-        "pathType": "str",
-        "nameFile": "",
-        "nameFileType": "str",
-        "nameFileToAdd": "zinzinnia.jpg",
-        "nameFileToAddType": "str",
-        "duration": "101244",
-        "durationType": "num",
+        "method": "REMOVE FILE",
+        "complexPayload": [
+            {
+                "value": "",
+                "type": "str",
+                "name": "Playlist's name"
+            },
+            {
+                "value": "",
+                "type": "str",
+                "name": "File's name"
+            }
+        ],
         "x": 300,
         "y": 1300,
         "wires": [
@@ -994,21 +959,8 @@
         "z": "32feeadd7be55064",
         "creds": "45a089d7cc2c88db",
         "content": "files",
-        "methodForFiles": "GET ALL",
-        "methodForPlaylists": "GET ALL",
-        "methodForPlayers": "GET ALL",
-        "idd": "",
-        "iddType": "num",
-        "name": "",
-        "nameType": "str",
-        "path": "C:\\Users\\pierr\\OneDrive\\Images\\Captures d’écran\\Capture d'écran 2023-12-26 133838.png",
-        "pathType": "str",
-        "nameFile": "",
-        "nameFileType": "str",
-        "nameFileToAdd": "",
-        "nameFileToAddType": "str",
-        "duration": "10",
-        "durationType": "num",
+        "method": "GET ALL",
+        "complexPayload": [],
         "x": 1310,
         "y": 140,
         "wires": [
@@ -1059,8 +1011,2569 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1800,
+        "x": 1540,
         "y": 140,
+        "wires": []
+    },
+    {
+        "id": "28ce325ffd5cc27e",
+        "type": "comment",
+        "z": "32feeadd7be55064",
+        "name": "Groups",
+        "info": "# ",
+        "x": 110,
+        "y": 1400,
+        "wires": []
+    },
+    {
+        "id": "9f0127357cad787d",
+        "type": "pisignage-services",
+        "z": "32feeadd7be55064",
+        "creds": "d5c57d6f5f7b29a4",
+        "content": "groups",
+        "method": "GET ALL",
+        "complexPayload": [],
+        "x": 350,
+        "y": 1460,
+        "wires": [
+            [
+                "10aaa1fb27380b43"
+            ]
+        ]
+    },
+    {
+        "id": "d036271d7bc59d49",
+        "type": "inject",
+        "z": "32feeadd7be55064",
+        "name": "Get All",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 1460,
+        "wires": [
+            [
+                "9f0127357cad787d"
+            ]
+        ]
+    },
+    {
+        "id": "10aaa1fb27380b43",
+        "type": "debug",
+        "z": "32feeadd7be55064",
+        "name": "debug 20",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "f761d51d3b7b931e",
+        "type": "pisignage-services",
+        "z": "32feeadd7be55064",
+        "creds": "d5c57d6f5f7b29a4",
+        "content": "groups",
+        "method": "CREATE",
+        "complexPayload": [],
+        "x": 330,
+        "y": 1540,
+        "wires": [
+            [
+                "56b4206da10a4c8f"
+            ]
+        ]
+    },
+    {
+        "id": "302d54c4c910c2dd",
+        "type": "inject",
+        "z": "32feeadd7be55064",
+        "name": "Create",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 1540,
+        "wires": [
+            [
+                "f761d51d3b7b931e"
+            ]
+        ]
+    },
+    {
+        "id": "56b4206da10a4c8f",
+        "type": "debug",
+        "z": "32feeadd7be55064",
+        "name": "debug 21",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "83ff4ada0fa9e6b2",
+        "type": "pisignage-services",
+        "z": "32feeadd7be55064",
+        "creds": "d5c57d6f5f7b29a4",
+        "content": "groups",
+        "method": "GET ONE",
+        "complexPayload": [],
+        "x": 300,
+        "y": 1620,
+        "wires": [
+            [
+                "1784014176f33f11"
+            ]
+        ]
+    },
+    {
+        "id": "1407bb2b92dd18ea",
+        "type": "inject",
+        "z": "32feeadd7be55064",
+        "name": "Get One",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 1620,
+        "wires": [
+            [
+                "83ff4ada0fa9e6b2"
+            ]
+        ]
+    },
+    {
+        "id": "1784014176f33f11",
+        "type": "debug",
+        "z": "32feeadd7be55064",
+        "name": "debug 22",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 1620,
+        "wires": []
+    },
+    {
+        "id": "3f88b09b140b7bd4",
+        "type": "pisignage-services",
+        "z": "32feeadd7be55064",
+        "creds": "d5c57d6f5f7b29a4",
+        "content": "groups",
+        "method": "DELETE",
+        "complexPayload": [],
+        "x": 310,
+        "y": 1700,
+        "wires": [
+            [
+                "51db7ea743071394"
+            ]
+        ]
+    },
+    {
+        "id": "48bb64c2eaad7850",
+        "type": "inject",
+        "z": "32feeadd7be55064",
+        "name": "Delete",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 1700,
+        "wires": [
+            [
+                "3f88b09b140b7bd4"
+            ]
+        ]
+    },
+    {
+        "id": "51db7ea743071394",
+        "type": "debug",
+        "z": "32feeadd7be55064",
+        "name": "debug 23",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 830,
+        "y": 1700,
+        "wires": []
+    },
+    {
+        "id": "5cf1c767e1f5d417",
+        "type": "pisignage-services",
+        "z": "32feeadd7be55064",
+        "creds": "d5c57d6f5f7b29a4",
+        "content": "groups",
+        "method": "ADD PLAYLIST & DEPLOY",
+        "complexPayload": [],
+        "x": 450,
+        "y": 1780,
+        "wires": [
+            [
+                "98ed08d4245c1e99"
+            ]
+        ]
+    },
+    {
+        "id": "8cdb0900136db0c3",
+        "type": "inject",
+        "z": "32feeadd7be55064",
+        "name": "Add playlist and deploy",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 1780,
+        "wires": [
+            [
+                "5cf1c767e1f5d417"
+            ]
+        ]
+    },
+    {
+        "id": "98ed08d4245c1e99",
+        "type": "debug",
+        "z": "32feeadd7be55064",
+        "name": "debug 24",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 810,
+        "y": 1780,
+        "wires": []
+    },
+    {
+        "id": "c641dfe262316368",
+        "type": "pisignage-services",
+        "z": "32feeadd7be55064",
+        "creds": "d5c57d6f5f7b29a4",
+        "content": "groups",
+        "method": "REMOVE PLAYLIST & DEPLOY",
+        "complexPayload": [],
+        "x": 450,
+        "y": 1860,
+        "wires": [
+            [
+                "31c7c2431301bed6"
+            ]
+        ]
+    },
+    {
+        "id": "9239c69bc8d61d4f",
+        "type": "inject",
+        "z": "32feeadd7be55064",
+        "name": "Remove playlist and deploy",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 1860,
+        "wires": [
+            [
+                "c641dfe262316368"
+            ]
+        ]
+    },
+    {
+        "id": "31c7c2431301bed6",
+        "type": "debug",
+        "z": "32feeadd7be55064",
+        "name": "debug 25",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 810,
+        "y": 1860,
+        "wires": []
+    },
+    {
+        "id": "9da9f62cf399d67f",
+        "type": "pisignage-services",
+        "z": "32feeadd7be55064",
+        "creds": "45a089d7cc2c88db",
+        "content": "files",
+        "method": "DELETE",
+        "complexPayload": [
+            {
+                "value": "marion.png",
+                "type": "str",
+                "name": "File's name"
+            }
+        ],
+        "x": 1330,
+        "y": 260,
+        "wires": [
+            [
+                "169af7468da3bf05"
+            ]
+        ]
+    },
+    {
+        "id": "36fb025788489d52",
+        "type": "inject",
+        "z": "32feeadd7be55064",
+        "name": "Delete",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1110,
+        "y": 260,
+        "wires": [
+            [
+                "9da9f62cf399d67f"
+            ]
+        ]
+    },
+    {
+        "id": "169af7468da3bf05",
+        "type": "debug",
+        "z": "32feeadd7be55064",
+        "name": "debug 26",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1560,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "a1c169d9a762fbd4",
+        "type": "pisignage-services",
+        "z": "32feeadd7be55064",
+        "creds": "45a089d7cc2c88db",
+        "content": "files",
+        "method": "POST FROM LOCAL",
+        "complexPayload": [
+            {
+                "value": "C:\\Users\\pierr\\OneDrive\\Bureau\\mp4squirel.mp4",
+                "type": "str",
+                "name": "File's path"
+            }
+        ],
+        "x": 1250,
+        "y": 40,
+        "wires": [
+            [
+                "894a2eeea543b2c1"
+            ]
+        ]
+    },
+    {
+        "id": "5d393b6c0458d03d",
+        "type": "inject",
+        "z": "32feeadd7be55064",
+        "name": "Post",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1030,
+        "y": 40,
+        "wires": [
+            [
+                "a1c169d9a762fbd4"
+            ]
+        ]
+    },
+    {
+        "id": "894a2eeea543b2c1",
+        "type": "debug",
+        "z": "32feeadd7be55064",
+        "name": "debug 27",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1480,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "dc5ff8a7a22fd916",
+        "type": "pisignage-services",
+        "z": "32feeadd7be55064",
+        "creds": "45a089d7cc2c88db",
+        "content": "playlists",
+        "method": "CREATE",
+        "complexPayload": [
+            {
+                "value": "Next",
+                "type": "str",
+                "name": "Playlist's name"
+            }
+        ],
+        "x": 1190,
+        "y": 900,
+        "wires": [
+            [
+                "0b9b586cf6348d10"
+            ]
+        ]
+    },
+    {
+        "id": "668011289e1f7122",
+        "type": "inject",
+        "z": "32feeadd7be55064",
+        "name": "Create",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1010,
+        "y": 900,
+        "wires": [
+            [
+                "dc5ff8a7a22fd916"
+            ]
+        ]
+    },
+    {
+        "id": "0b9b586cf6348d10",
+        "type": "debug",
+        "z": "32feeadd7be55064",
+        "name": "debug 28",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1720,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "25b8a7748285fd40",
+        "type": "inject",
+        "z": "32feeadd7be55064",
+        "name": "Add File",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1020,
+        "y": 980,
+        "wires": [
+            [
+                "9ab33cc38ca63ab9"
+            ]
+        ]
+    },
+    {
+        "id": "f948ab4ca65bc82d",
+        "type": "debug",
+        "z": "32feeadd7be55064",
+        "name": "debug 29",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1700,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "9ab33cc38ca63ab9",
+        "type": "pisignage-services",
+        "z": "32feeadd7be55064",
+        "creds": "45a089d7cc2c88db",
+        "content": "playlists",
+        "method": "ADD FILE",
+        "complexPayload": [
+            {
+                "value": "Next",
+                "type": "str",
+                "name": "Playlist's name"
+            },
+            {
+                "value": "mp4squirel.mp4",
+                "type": "str",
+                "name": "File's name"
+            },
+            {
+                "value": "10",
+                "type": "num",
+                "name": "Duration"
+            },
+            {
+                "value": "true",
+                "type": "bool",
+                "name": "Is video"
+            }
+        ],
+        "x": 1200,
+        "y": 980,
+        "wires": [
+            [
+                "f948ab4ca65bc82d"
+            ]
+        ]
+    },
+    {
+        "id": "2412d99ae581ca7b",
+        "type": "pisignage-services",
+        "z": "32feeadd7be55064",
+        "creds": "45a089d7cc2c88db",
+        "content": "groups",
+        "method": "ADD PLAYLIST & DEPLOY",
+        "complexPayload": [
+            {
+                "value": "65fc630698aa74b9b6862b20",
+                "type": "str",
+                "name": "Group's id"
+            },
+            {
+                "value": "Next",
+                "type": "str",
+                "name": "Playlist's name"
+            },
+            {
+                "value": "true",
+                "type": "bool",
+                "name": "Shuffle playlists"
+            },
+            {
+                "value": "true",
+                "type": "bool",
+                "name": "Combine playlists"
+            }
+        ],
+        "x": 1370,
+        "y": 1780,
+        "wires": [
+            [
+                "4b58aa8bf9971455"
+            ]
+        ]
+    },
+    {
+        "id": "f178b3f817ea7138",
+        "type": "inject",
+        "z": "32feeadd7be55064",
+        "name": "Add playlist and deploy",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1070,
+        "y": 1780,
+        "wires": [
+            [
+                "2412d99ae581ca7b"
+            ]
+        ]
+    },
+    {
+        "id": "4b58aa8bf9971455",
+        "type": "debug",
+        "z": "32feeadd7be55064",
+        "name": "debug 30",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1730,
+        "y": 1780,
+        "wires": []
+    },
+    {
+        "id": "1477b399e0fc64dc",
+        "type": "pisignage-services",
+        "z": "32feeadd7be55064",
+        "creds": "45a089d7cc2c88db",
+        "content": "groups",
+        "method": "GET ALL",
+        "complexPayload": [],
+        "x": 1270,
+        "y": 1460,
+        "wires": [
+            [
+                "339ebbc3e79fa03f"
+            ]
+        ]
+    },
+    {
+        "id": "e8b0dfe8372b8e69",
+        "type": "inject",
+        "z": "32feeadd7be55064",
+        "name": "Get All",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1050,
+        "y": 1460,
+        "wires": [
+            [
+                "1477b399e0fc64dc"
+            ]
+        ]
+    },
+    {
+        "id": "339ebbc3e79fa03f",
+        "type": "debug",
+        "z": "32feeadd7be55064",
+        "name": "debug 31",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1520,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "a6daa7e8e16bf550",
+        "type": "pisignage-services",
+        "z": "32feeadd7be55064",
+        "creds": "45a089d7cc2c88db",
+        "content": "playlists",
+        "method": "GET ALL",
+        "complexPayload": [],
+        "x": 1170,
+        "y": 840,
+        "wires": [
+            [
+                "fa273ce05691e30a"
+            ]
+        ]
+    },
+    {
+        "id": "3cc191ac3970f81b",
+        "type": "inject",
+        "z": "32feeadd7be55064",
+        "name": "Get All",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 990,
+        "y": 840,
+        "wires": [
+            [
+                "a6daa7e8e16bf550"
+            ]
+        ]
+    },
+    {
+        "id": "fa273ce05691e30a",
+        "type": "debug",
+        "z": "32feeadd7be55064",
+        "name": "debug 32",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1700,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "49067f291ec8ab7a",
+        "type": "inject",
+        "z": "32feeadd7be55064",
+        "name": "Remove playlist and deploy",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1060,
+        "y": 1860,
+        "wires": [
+            [
+                "c50a900572795d1e"
+            ]
+        ]
+    },
+    {
+        "id": "c50a900572795d1e",
+        "type": "pisignage-services",
+        "z": "32feeadd7be55064",
+        "creds": "45a089d7cc2c88db",
+        "content": "groups",
+        "method": "REMOVE PLAYLIST & DEPLOY",
+        "complexPayload": [
+            {
+                "value": "65fc630698aa74b9b6862b20",
+                "type": "str",
+                "name": "Group's id"
+            },
+            {
+                "value": "Next",
+                "type": "str",
+                "name": "Playlist's name"
+            },
+            {
+                "value": "false",
+                "type": "bool",
+                "name": "Shuffle playlists"
+            }
+        ],
+        "x": 1340,
+        "y": 1860,
+        "wires": [
+            [
+                "8b7d783a49fc7409"
+            ]
+        ]
+    },
+    {
+        "id": "8b7d783a49fc7409",
+        "type": "debug",
+        "z": "32feeadd7be55064",
+        "name": "debug 33",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1700,
+        "y": 1860,
+        "wires": []
+    },
+    {
+        "id": "65cbd917b67399e6",
+        "type": "comment",
+        "z": "32feeadd7be55064",
+        "name": "Player",
+        "info": "# ",
+        "x": 90,
+        "y": 1980,
+        "wires": []
+    },
+    {
+        "id": "2c168b2a4a0273f8",
+        "type": "pisignage-services",
+        "z": "32feeadd7be55064",
+        "creds": "d5c57d6f5f7b29a4",
+        "content": "players",
+        "method": "GET ALL",
+        "complexPayload": [
+            {
+                "value": "false",
+                "type": "bool",
+                "name": "bool's test"
+            }
+        ],
+        "x": 330,
+        "y": 2040,
+        "wires": [
+            [
+                "7ba2879bd952c784"
+            ]
+        ]
+    },
+    {
+        "id": "397e19c99c4d6b90",
+        "type": "inject",
+        "z": "32feeadd7be55064",
+        "name": "Get All",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 2040,
+        "wires": [
+            [
+                "2c168b2a4a0273f8"
+            ]
+        ]
+    },
+    {
+        "id": "7ba2879bd952c784",
+        "type": "debug",
+        "z": "32feeadd7be55064",
+        "name": "debug 34",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 2040,
+        "wires": []
+    },
+    {
+        "id": "e85b39049759dcab",
+        "type": "pisignage-services",
+        "z": "32feeadd7be55064",
+        "creds": "45a089d7cc2c88db",
+        "content": "players",
+        "method": "GET ALL",
+        "complexPayload": [],
+        "x": 1290,
+        "y": 2040,
+        "wires": [
+            [
+                "2a5b0976c2a26e31"
+            ]
+        ]
+    },
+    {
+        "id": "f9b3d24a25d3429e",
+        "type": "inject",
+        "z": "32feeadd7be55064",
+        "name": "Get All",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1070,
+        "y": 2040,
+        "wires": [
+            [
+                "e85b39049759dcab"
+            ]
+        ]
+    },
+    {
+        "id": "2a5b0976c2a26e31",
+        "type": "debug",
+        "z": "32feeadd7be55064",
+        "name": "debug 35",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1780,
+        "y": 2040,
+        "wires": []
+    },
+    {
+        "id": "3c499d49ea5cf29f",
+        "type": "pisignage-services",
+        "z": "32feeadd7be55064",
+        "creds": "45a089d7cc2c88db",
+        "content": "players",
+        "method": "CREATE",
+        "complexPayload": [
+            {
+                "value": "tv salon2",
+                "type": "str",
+                "name": "Player's name"
+            },
+            {
+                "value": "65e4ebd676efe4d8ba2fecb2",
+                "type": "str",
+                "name": "Group's id"
+            },
+            {
+                "value": "default",
+                "type": "str",
+                "name": "Group's name"
+            },
+            {
+                "value": "ASIA/CALCUTTA",
+                "type": "str",
+                "name": "Timezone"
+            },
+            {
+                "value": "5000000000c0e282",
+                "type": "str",
+                "name": "Serial Number"
+            },
+            {
+                "value": "Valence",
+                "type": "str",
+                "name": "Location"
+            },
+            {
+                "value": "",
+                "type": "bool",
+                "name": "Managed"
+            }
+        ],
+        "x": 1310,
+        "y": 2140,
+        "wires": [
+            [
+                "d31a2d70daa14b6a"
+            ]
+        ]
+    },
+    {
+        "id": "18a54b9219323328",
+        "type": "inject",
+        "z": "32feeadd7be55064",
+        "name": "Create",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1090,
+        "y": 2140,
+        "wires": [
+            [
+                "3c499d49ea5cf29f"
+            ]
+        ]
+    },
+    {
+        "id": "d31a2d70daa14b6a",
+        "type": "debug",
+        "z": "32feeadd7be55064",
+        "name": "debug 36",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1800,
+        "y": 2140,
+        "wires": []
+    },
+    {
+        "id": "e5435cba68ade3bc",
+        "type": "pisignage-services",
+        "z": "32feeadd7be55064",
+        "creds": "d5c57d6f5f7b29a4",
+        "content": "players",
+        "method": "CREATE",
+        "complexPayload": [
+            {
+                "value": "",
+                "type": "str",
+                "name": "Player's name"
+            },
+            {
+                "value": "",
+                "type": "str",
+                "name": "Group's id"
+            },
+            {
+                "value": "",
+                "type": "str",
+                "name": "Group's name"
+            },
+            {
+                "value": "",
+                "type": "str",
+                "name": "Timezone"
+            },
+            {
+                "value": "",
+                "type": "str",
+                "name": "Serial Number"
+            },
+            {
+                "value": "",
+                "type": "str",
+                "name": "Location"
+            }
+        ],
+        "x": 330,
+        "y": 2140,
+        "wires": [
+            [
+                "79332b49e86097a0"
+            ]
+        ]
+    },
+    {
+        "id": "8d225f39a90fb3d6",
+        "type": "inject",
+        "z": "32feeadd7be55064",
+        "name": "Create",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 90,
+        "y": 2140,
+        "wires": [
+            [
+                "e5435cba68ade3bc"
+            ]
+        ]
+    },
+    {
+        "id": "79332b49e86097a0",
+        "type": "debug",
+        "z": "32feeadd7be55064",
+        "name": "debug 37",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 2140,
+        "wires": []
+    },
+    {
+        "id": "94011469fca6a88c",
+        "type": "pisignage-services",
+        "z": "32feeadd7be55064",
+        "creds": "d5c57d6f5f7b29a4",
+        "content": "players",
+        "method": "GET ONE",
+        "complexPayload": [
+            {
+                "value": "65f850072852d88bbfddeed9",
+                "type": "str",
+                "name": "Player's id"
+            }
+        ],
+        "x": 350,
+        "y": 2240,
+        "wires": [
+            [
+                "bf8cc5c2d15e2606"
+            ]
+        ]
+    },
+    {
+        "id": "c3b5ce2c5ccbd641",
+        "type": "inject",
+        "z": "32feeadd7be55064",
+        "name": "Get one",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 2240,
+        "wires": [
+            [
+                "94011469fca6a88c"
+            ]
+        ]
+    },
+    {
+        "id": "bf8cc5c2d15e2606",
+        "type": "debug",
+        "z": "32feeadd7be55064",
+        "name": "debug 38",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 2240,
+        "wires": []
+    },
+    {
+        "id": "db8097546bd56cd4",
+        "type": "pisignage-services",
+        "z": "32feeadd7be55064",
+        "creds": "d5c57d6f5f7b29a4",
+        "content": "players",
+        "method": "DELETE",
+        "complexPayload": [
+            {
+                "value": "65f850072852d88bbfddeed9",
+                "type": "str",
+                "name": "Player's id"
+            }
+        ],
+        "x": 330,
+        "y": 2340,
+        "wires": [
+            [
+                "4daca662836d3e32"
+            ]
+        ]
+    },
+    {
+        "id": "bbbc991b9fb890aa",
+        "type": "inject",
+        "z": "32feeadd7be55064",
+        "name": "Delete",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 90,
+        "y": 2340,
+        "wires": [
+            [
+                "db8097546bd56cd4"
+            ]
+        ]
+    },
+    {
+        "id": "4daca662836d3e32",
+        "type": "debug",
+        "z": "32feeadd7be55064",
+        "name": "debug 39",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 2340,
+        "wires": []
+    },
+    {
+        "id": "f353463cd6cf45ea",
+        "type": "pisignage-services",
+        "z": "32feeadd7be55064",
+        "creds": "45a089d7cc2c88db",
+        "content": "players",
+        "method": "TV ON/OFF",
+        "complexPayload": [
+            {
+                "value": "65faba5ced585f4941ae2f13",
+                "type": "str",
+                "name": "Player's id"
+            },
+            {
+                "value": "false",
+                "type": "bool",
+                "name": "TV ON"
+            }
+        ],
+        "x": 1290,
+        "y": 2240,
+        "wires": [
+            [
+                "b97cb61ea7ec1ff4"
+            ]
+        ]
+    },
+    {
+        "id": "7238a8de7abf89e3",
+        "type": "inject",
+        "z": "32feeadd7be55064",
+        "name": "TV ON/OFF",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1090,
+        "y": 2240,
+        "wires": [
+            [
+                "f353463cd6cf45ea"
+            ]
+        ]
+    },
+    {
+        "id": "b97cb61ea7ec1ff4",
+        "type": "debug",
+        "z": "32feeadd7be55064",
+        "name": "debug 40",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1780,
+        "y": 2240,
+        "wires": []
+    },
+    {
+        "id": "5551a8b9b44cc209",
+        "type": "inject",
+        "z": "32feeadd7be55064",
+        "name": "UPDATE",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1080,
+        "y": 2320,
+        "wires": [
+            [
+                "0f05627b46dbb39f"
+            ]
+        ]
+    },
+    {
+        "id": "0f05627b46dbb39f",
+        "type": "pisignage-services",
+        "z": "32feeadd7be55064",
+        "creds": "45a089d7cc2c88db",
+        "content": "players",
+        "method": "UPDATE",
+        "complexPayload": [
+            {
+                "value": "65faba5ced585f4941ae2f13",
+                "type": "str",
+                "name": "Player's id"
+            },
+            {
+                "value": "qzqregfn",
+                "type": "str",
+                "name": "Player's name"
+            },
+            {
+                "value": "65e4ebd676efe4d8ba2fecb2",
+                "type": "str",
+                "name": "Group's id"
+            },
+            {
+                "value": "default",
+                "type": "str",
+                "name": "Group's name"
+            },
+            {
+                "value": "zwdg",
+                "type": "str",
+                "name": "Timezone"
+            },
+            {
+                "value": "5000000000c0e282",
+                "type": "str",
+                "name": "Serial Number"
+            },
+            {
+                "value": "qergqe",
+                "type": "str",
+                "name": "Location"
+            },
+            {
+                "value": "false",
+                "type": "bool",
+                "name": "Managed"
+            }
+        ],
+        "x": 1290,
+        "y": 2320,
+        "wires": [
+            [
+                "6ab7b328c556182f"
+            ]
+        ]
+    },
+    {
+        "id": "6ab7b328c556182f",
+        "type": "debug",
+        "z": "32feeadd7be55064",
+        "name": "debug 41",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1780,
+        "y": 2320,
+        "wires": []
+    },
+    {
+        "id": "2a59906a74ce2854",
+        "type": "inject",
+        "z": "32feeadd7be55064",
+        "name": "Controls",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1100,
+        "y": 2400,
+        "wires": [
+            [
+                "4f31e29cbef7126e"
+            ]
+        ]
+    },
+    {
+        "id": "4f31e29cbef7126e",
+        "type": "pisignage-services",
+        "z": "32feeadd7be55064",
+        "creds": "45a089d7cc2c88db",
+        "content": "players",
+        "method": "CONTROLS",
+        "complexPayload": [
+            {
+                "value": "65faba5ced585f4941ae2f13",
+                "type": "str",
+                "name": "Player's id"
+            },
+            {
+                "value": "Next asset",
+                "type": "Command",
+                "name": "Command"
+            }
+        ],
+        "x": 1290,
+        "y": 2400,
+        "wires": [
+            [
+                "2e12a25ddece22b8"
+            ]
+        ]
+    },
+    {
+        "id": "2e12a25ddece22b8",
+        "type": "debug",
+        "z": "32feeadd7be55064",
+        "name": "debug 42",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1800,
+        "y": 2400,
+        "wires": []
+    },
+    {
+        "id": "473e62677a48cf3b",
+        "type": "image",
+        "z": "32feeadd7be55064",
+        "name": "",
+        "width": 160,
+        "data": "payload",
+        "dataType": "msg",
+        "thumbnail": false,
+        "active": true,
+        "pass": false,
+        "outputs": 0,
+        "x": 440,
+        "y": 1920,
+        "wires": []
+    },
+    {
+        "id": "576cd4a06c4329cb",
+        "type": "pisignage-services",
+        "z": "32feeadd7be55064",
+        "creds": "45a089d7cc2c88db",
+        "content": "files",
+        "method": "GET ONE",
+        "complexPayload": [
+            {
+                "value": "hash2.png",
+                "type": "str",
+                "name": "File's name"
+            }
+        ],
+        "x": 1330,
+        "y": 360,
+        "wires": [
+            [
+                "a1ee56fe6942e482"
+            ]
+        ]
+    },
+    {
+        "id": "fa7c86b090491ba8",
+        "type": "inject",
+        "z": "32feeadd7be55064",
+        "name": "Get one",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1110,
+        "y": 360,
+        "wires": [
+            [
+                "576cd4a06c4329cb"
+            ]
+        ]
+    },
+    {
+        "id": "a1ee56fe6942e482",
+        "type": "debug",
+        "z": "32feeadd7be55064",
+        "name": "debug 49",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1560,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "9fee369247682e43",
+        "type": "pisignage-services",
+        "z": "32feeadd7be55064",
+        "creds": "45a089d7cc2c88db",
+        "content": "files",
+        "method": "RENAME",
+        "complexPayload": [
+            {
+                "value": "hash2.png",
+                "type": "str",
+                "name": "File's name"
+            },
+            {
+                "value": "newnamehash.png",
+                "type": "str",
+                "name": "New name"
+            }
+        ],
+        "x": 1330,
+        "y": 440,
+        "wires": [
+            [
+                "b0dc46622e055302"
+            ]
+        ]
+    },
+    {
+        "id": "f1012d66435b11ea",
+        "type": "inject",
+        "z": "32feeadd7be55064",
+        "name": "Rename",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1120,
+        "y": 440,
+        "wires": [
+            [
+                "9fee369247682e43"
+            ]
+        ]
+    },
+    {
+        "id": "b0dc46622e055302",
+        "type": "debug",
+        "z": "32feeadd7be55064",
+        "name": "debug 50",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1560,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "6b1548856c62a3f7",
+        "type": "pisignage-services",
+        "z": "32feeadd7be55064",
+        "creds": "45a089d7cc2c88db",
+        "content": "playlists",
+        "method": "GET ONE",
+        "complexPayload": [
+            {
+                "value": "Next",
+                "type": "str",
+                "name": "Playlist's name"
+            }
+        ],
+        "x": 1190,
+        "y": 1060,
+        "wires": [
+            [
+                "7aff6a4c8dbb9d34"
+            ]
+        ]
+    },
+    {
+        "id": "5a518fe72f4b9a96",
+        "type": "inject",
+        "z": "32feeadd7be55064",
+        "name": "Get One",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1020,
+        "y": 1060,
+        "wires": [
+            [
+                "6b1548856c62a3f7"
+            ]
+        ]
+    },
+    {
+        "id": "7aff6a4c8dbb9d34",
+        "type": "debug",
+        "z": "32feeadd7be55064",
+        "name": "debug 51",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1720,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "5dcaac7be42bab86",
+        "type": "pisignage-services",
+        "z": "32feeadd7be55064",
+        "creds": "45a089d7cc2c88db",
+        "content": "files",
+        "method": "GET ALL",
+        "complexPayload": [],
+        "x": 1170,
+        "y": 680,
+        "wires": [
+            [
+                "f7e32bf4535d2ab0"
+            ]
+        ]
+    },
+    {
+        "id": "f5f0c9c0a445974e",
+        "type": "inject",
+        "z": "32feeadd7be55064",
+        "name": "Add All files to PL",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 980,
+        "y": 680,
+        "wires": [
+            [
+                "5dcaac7be42bab86"
+            ]
+        ]
+    },
+    {
+        "id": "78304b8dc44cfb01",
+        "type": "split",
+        "z": "32feeadd7be55064",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": true,
+        "addname": "",
+        "x": 1470,
+        "y": 680,
+        "wires": [
+            [
+                "0641797d1820578d"
+            ]
+        ]
+    },
+    {
+        "id": "f7e32bf4535d2ab0",
+        "type": "function",
+        "z": "32feeadd7be55064",
+        "name": "function 2",
+        "func": "msg.payload=msg.payload.data.files;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1340,
+        "y": 680,
+        "wires": [
+            [
+                "78304b8dc44cfb01"
+            ]
+        ]
+    },
+    {
+        "id": "0641797d1820578d",
+        "type": "debug",
+        "z": "32feeadd7be55064",
+        "name": "debug 53",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1860,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "7cfe35ca1456e995",
+        "type": "pisignage-services",
+        "z": "32feeadd7be55064",
+        "creds": "45a089d7cc2c88db",
+        "content": "playlists",
+        "method": "ADD FILE",
+        "complexPayload": [
+            {
+                "value": "Next",
+                "type": "str",
+                "name": "Playlist's name"
+            },
+            {
+                "value": "payload",
+                "type": "msg",
+                "name": "File's name"
+            },
+            {
+                "value": "5",
+                "type": "num",
+                "name": "Duration"
+            }
+        ],
+        "x": 1670,
+        "y": 680,
+        "wires": [
+            [
+                "0641797d1820578d"
+            ]
+        ]
+    },
+    {
+        "id": "06cc1aedaf1494d6",
+        "type": "inject",
+        "z": "32feeadd7be55064",
+        "name": "REmove file",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1010,
+        "y": 1140,
+        "wires": [
+            [
+                "c467d93b7bc8d491"
+            ]
+        ]
+    },
+    {
+        "id": "7a4f16383a4e65d0",
+        "type": "debug",
+        "z": "32feeadd7be55064",
+        "name": "debug 54",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1680,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "c467d93b7bc8d491",
+        "type": "pisignage-services",
+        "z": "32feeadd7be55064",
+        "creds": "45a089d7cc2c88db",
+        "content": "playlists",
+        "method": "REMOVE FILE",
+        "complexPayload": [
+            {
+                "value": "Next",
+                "type": "str",
+                "name": "Playlist's name"
+            },
+            {
+                "value": "pngtree-isolated-front-view-cat-on-white-background-png-image_7094909.png",
+                "type": "str",
+                "name": "File's name"
+            }
+        ],
+        "x": 1180,
+        "y": 1140,
+        "wires": [
+            [
+                "7a4f16383a4e65d0"
+            ]
+        ]
+    },
+    {
+        "id": "d796e9150ae4913b",
+        "type": "pisignage-services",
+        "z": "32feeadd7be55064",
+        "creds": "45a089d7cc2c88db",
+        "content": "groups",
+        "method": "GET ONE",
+        "complexPayload": [
+            {
+                "value": "65fc630698aa74b9b6862b20",
+                "type": "str",
+                "name": "Group's id"
+            }
+        ],
+        "x": 1270,
+        "y": 1520,
+        "wires": [
+            [
+                "20e836fde2036d17"
+            ]
+        ]
+    },
+    {
+        "id": "074ca5176cc40150",
+        "type": "inject",
+        "z": "32feeadd7be55064",
+        "name": "Get one",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1050,
+        "y": 1520,
+        "wires": [
+            [
+                "d796e9150ae4913b"
+            ]
+        ]
+    },
+    {
+        "id": "20e836fde2036d17",
+        "type": "debug",
+        "z": "32feeadd7be55064",
+        "name": "debug 55",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1520,
+        "y": 1520,
+        "wires": []
+    },
+    {
+        "id": "a0947afc2c146d5d",
+        "type": "pisignage-services",
+        "z": "32feeadd7be55064",
+        "creds": "45a089d7cc2c88db",
+        "content": "groups",
+        "method": "CREATE",
+        "complexPayload": [
+            {
+                "value": "newnext",
+                "type": "str",
+                "name": "Group's name"
+            }
+        ],
+        "x": 1270,
+        "y": 1580,
+        "wires": [
+            [
+                "917d4b1c46dd373f"
+            ]
+        ]
+    },
+    {
+        "id": "d189cdddaa62639a",
+        "type": "inject",
+        "z": "32feeadd7be55064",
+        "name": "create",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1050,
+        "y": 1580,
+        "wires": [
+            [
+                "a0947afc2c146d5d"
+            ]
+        ]
+    },
+    {
+        "id": "917d4b1c46dd373f",
+        "type": "debug",
+        "z": "32feeadd7be55064",
+        "name": "debug 56",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1520,
+        "y": 1580,
+        "wires": []
+    },
+    {
+        "id": "a91cbf04932744cf",
+        "type": "pisignage-services",
+        "z": "32feeadd7be55064",
+        "creds": "45a089d7cc2c88db",
+        "content": "groups",
+        "method": "DELETE",
+        "complexPayload": [
+            {
+                "value": "66056a20d4aac49a7f95251a",
+                "type": "str",
+                "name": "Group's id"
+            }
+        ],
+        "x": 1270,
+        "y": 1620,
+        "wires": [
+            [
+                "5accd5075bbe3181"
+            ]
+        ]
+    },
+    {
+        "id": "9945a0b22a65aa27",
+        "type": "inject",
+        "z": "32feeadd7be55064",
+        "name": "delete",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1050,
+        "y": 1620,
+        "wires": [
+            [
+                "a91cbf04932744cf"
+            ]
+        ]
+    },
+    {
+        "id": "5accd5075bbe3181",
+        "type": "debug",
+        "z": "32feeadd7be55064",
+        "name": "debug 57",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1520,
+        "y": 1620,
+        "wires": []
+    },
+    {
+        "id": "6ff47f08c140746e",
+        "type": "delay",
+        "z": "32feeadd7be55064",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "800",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1520,
+        "y": 520,
+        "wires": [
+            [
+                "7cfe35ca1456e995"
+            ]
+        ]
+    },
+    {
+        "id": "d86c6819e2e640c6",
+        "type": "pisignage-services",
+        "z": "32feeadd7be55064",
+        "creds": "45a089d7cc2c88db",
+        "content": "files",
+        "method": "GET ALL",
+        "complexPayload": [],
+        "x": 1170,
+        "y": 760,
+        "wires": [
+            [
+                "35ac9b3444d7ba59"
+            ]
+        ]
+    },
+    {
+        "id": "aedce6ccfb4ef80e",
+        "type": "inject",
+        "z": "32feeadd7be55064",
+        "name": "Remove All files to PL",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1000,
+        "y": 760,
+        "wires": [
+            [
+                "d86c6819e2e640c6"
+            ]
+        ]
+    },
+    {
+        "id": "b9f74804e1e6f007",
+        "type": "split",
+        "z": "32feeadd7be55064",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": true,
+        "addname": "",
+        "x": 1470,
+        "y": 760,
+        "wires": [
+            [
+                "6e907ad4ab21f038"
+            ]
+        ]
+    },
+    {
+        "id": "35ac9b3444d7ba59",
+        "type": "function",
+        "z": "32feeadd7be55064",
+        "name": "function 3",
+        "func": "msg.payload=msg.payload.data.files;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1340,
+        "y": 760,
+        "wires": [
+            [
+                "b9f74804e1e6f007"
+            ]
+        ]
+    },
+    {
+        "id": "1858079b54e78a9d",
+        "type": "debug",
+        "z": "32feeadd7be55064",
+        "name": "debug 58",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1860,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "54f38da1139009b2",
+        "type": "pisignage-services",
+        "z": "32feeadd7be55064",
+        "creds": "45a089d7cc2c88db",
+        "content": "playlists",
+        "method": "REMOVE FILE",
+        "complexPayload": [
+            {
+                "value": "Next",
+                "type": "str",
+                "name": "Playlist's name"
+            },
+            {
+                "value": "payload",
+                "type": "msg",
+                "name": "File's name"
+            }
+        ],
+        "x": 1670,
+        "y": 760,
+        "wires": [
+            [
+                "1858079b54e78a9d"
+            ]
+        ]
+    },
+    {
+        "id": "6e907ad4ab21f038",
+        "type": "delay",
+        "z": "32feeadd7be55064",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "800",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1540,
+        "y": 760,
+        "wires": [
+            [
+                "54f38da1139009b2"
+            ]
+        ]
+    },
+    {
+        "id": "9558ddc5bfbb503d",
+        "type": "pisignage-services",
+        "z": "32feeadd7be55064",
+        "creds": "45a089d7cc2c88db",
+        "content": "groups",
+        "method": "DEPLOY",
+        "complexPayload": [
+            {
+                "value": "65fc630698aa74b9b6862b20",
+                "type": "str",
+                "name": "Group's id"
+            },
+            {
+                "value": "true",
+                "type": "bool",
+                "name": "Shuffle playlists"
+            },
+            {
+                "value": "true",
+                "type": "bool",
+                "name": "Combine playlists"
+            }
+        ],
+        "x": 1350,
+        "y": 1700,
+        "wires": [
+            [
+                "80ec25a7fa0bded9"
+            ]
+        ]
+    },
+    {
+        "id": "122538026e145bd1",
+        "type": "inject",
+        "z": "32feeadd7be55064",
+        "name": "Deploy",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1000,
+        "y": 1700,
+        "wires": [
+            [
+                "9558ddc5bfbb503d"
+            ]
+        ]
+    },
+    {
+        "id": "80ec25a7fa0bded9",
+        "type": "debug",
+        "z": "32feeadd7be55064",
+        "name": "debug 59",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1710,
+        "y": 1700,
         "wires": []
     }
 ]
